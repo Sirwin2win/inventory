@@ -1,10 +1,14 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DashboardLayout from "./layouts/DashboardLayout";
 
 const App = () => {
   return (
-    <div>
-      <p className="text-3xl font-bold text-green-700">Hello world!</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<DashboardLayout />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
